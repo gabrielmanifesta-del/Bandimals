@@ -1,0 +1,126 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandimals Audio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🎵 Bandimals Audio</h1>
+  <p class="verse">
+    "Let everything that has breath praise the Lord." — Psalm 150:6
+  </p>
+</header>
+
+<main>
+
+  <section class="welcome-card">
+    <h2>Welcome!</h2>
+    <p>
+      Enjoy songs, recordings, and uplifting audio in a safe,
+      family-friendly environment.
+    </p>
+  </section>
+
+  <section class="library-section">
+    <div class="section-top">
+      <h2>Audio Library</h2>
+      <span id="track-count">0 files</span>
+    </div>
+
+    <div id="empty-state">
+      No audio has been added yet.
+    </div>
+
+    <div id="track-list"></div>
+  </section>
+
+</main>
+
+<button id="owner-toggle">
+  Owner Tools
+</button>
+
+<div id="owner-panel" aria-hidden="true">
+
+  <div class="panel-content">
+
+    <button id="close-panel">✖</button>
+
+    <form id="pin-form">
+      <h2>Owner Login</h2>
+
+      <input
+        type="password"
+        name="pin"
+        placeholder="Enter PIN"
+        required
+      >
+
+      <button type="submit">
+        Unlock
+      </button>
+    </form>
+
+    <div id="owner-content" hidden>
+
+      <h2>Add Audio</h2>
+
+      <form id="audio-form">
+
+        <input
+          type="text"
+          name="title"
+          placeholder="Track title"
+          required
+        >
+
+        <input
+          type="date"
+          id="track-date"
+          name="date"
+        >
+
+        <input
+          type="url"
+          name="url"
+          placeholder="Audio link (optional)"
+        >
+
+        <input
+          type="file"
+          name="file"
+          accept="audio/*"
+        >
+
+        <button type="submit">
+          Add Audio
+        </button>
+
+      </form>
+
+      <h3>Your Audio</h3>
+
+      <div id="owner-track-list"></div>
+
+      <button id="clear-local">
+        Remove All Audio
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+```
